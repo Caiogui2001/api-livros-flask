@@ -1,64 +1,32 @@
-# API de Livros com Python e Flask
+# Catálogo de Livros
 
-Atividade prática AV2 da disciplina Programação — Web Coding.
+Atividade prática AV2 da disciplina Programação – Web Coding.
 
-## Objetivo
-Criar uma API simples em Python com Flask que disponibiliza exatamente três livros por meio de uma requisição HTTP GET, com resposta JSON.
+## Sobre o projeto
 
-## Requisitos
-- Python 3 instalado
-- pip
+O projeto foi desenvolvido utilizando Python, Flask e React.
 
-## Instalação
-Abra o terminal na pasta do projeto e execute:
 
-```bash
-python -m venv venv
-```
 
-Ative o ambiente virtual no Windows (PowerShell):
+## Como executar
 
-```powershell
-.\venv\Scripts\Activate.ps1
-```
+### 1. Iniciar o Flask
 
-No Windows (Prompt de Comando):
+Na pasta principal, execute:
 
-```cmd
-venv\Scripts\activate.bat
-```
+`pip install -r backend-flask/requirements.txt`
 
-No Linux/macOS:
+`python backend-flask/app.py`
 
-```bash
-source venv/bin/activate
-```
+### 2. Iniciar o React
 
-Instale as dependências:
+Abra outro terminal e execute:
 
-```bash
-python -m pip install -r requirements.txt
-```
+`cd frontend-livros`
 
-## Execução
-```bash
-python app.py
-```
+`npm install`
 
-## Rota
-- Método: `GET`
-- URL local: `http://127.0.0.1:5000/livros`
+`npm run dev`
 
-## Exemplo de resposta
-```json
-{
-  "livros": [
-    {"id": 1, "titulo": "Dom Casmurro", "autor": "Machado de Assis", "ano": 1899},
-    {"id": 2, "titulo": "O Cortiço", "autor": "Aluísio Azevedo", "ano": 1890},
-    {"id": 3, "titulo": "A Hora da Estrela", "autor": "Clarice Lispector", "ano": 1977}
-  ]
-}
-```
+Depois, acesse http://localhost:5173/ e clique em **Buscar Livros**.
 
-## Observações
-Os dados estão definidos diretamente no código. Não é necessário banco de dados nem autenticação. O modo `debug=True` é destinado apenas ao desenvolvimento local.
