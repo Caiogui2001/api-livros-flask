@@ -1,0 +1,12 @@
+# Python e Flask
+venv/
+__pycache__/
+*.pyc
+
+# React e Vite
+node_modules/
+dist/
+
+# Arquivos locais
+.env
+.env.local
